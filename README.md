@@ -1,5 +1,3 @@
-# Laurent Fourez
-
 **Quantitative Finance | Balance Sheet Risk | Private Credit | Applied AI**
 
 Senior quantitative finance professional with 27 years of institutional experience
