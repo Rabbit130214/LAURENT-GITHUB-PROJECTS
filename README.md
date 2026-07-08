@@ -20,9 +20,13 @@ Senior quantitative finance professional with 27 years of institutional experien
 
 ## Current work *(private repositories — demos available on request)*
 
-- 🔍 **Private credit risk intelligence engine** — Python pipeline ingesting
-  FRED - SEC EDGAR BDC filings (Schedules of Investments), fair value divergence
-  detection, PIK-ratio early warning indicators
+- 🔍 * 🔍 **Private credit risk intelligence engine** — multi-source architecture (FRED live, SEC EDGAR BDC 10-Q planned, ECB Data Portal planned) with:
+  * **Cogniwave Credit Stress Score (CCSS)** — composite 0-100 combining HY OAS z-score, CCC-B differential z-score, yield curve slope, 3M momentum. Fully parameterizable via Pydantic (14 tunable parameters), configuration versioning, audit-ready traceability (EU AI Act compliant)
+  * **REST API (FastAPI)** with 3 endpoints (`/current`, `/latest`, `/compute`), auto-generated OpenAPI 3.1 documentation, interactive Swagger UI
+  * **Analytical storage** — DuckDB persisting all snapshots and calculations with the exact configuration used, enabling retroactive analysis and calibration
+  * **Test coverage** — 37 pytest tests (composite + API), CI/CD ready
+
+  **Live observation, 8 July 2026** — CCSS crossed the alert threshold at 50.18/100. CCC-B component alone contributes 57% of the score (top 3% historical z-score at +1.92σ) while HY OAS remains compressed (-1.18σ). This asymmetric divergence between the broad credit market and the stressed tail is precisely the precursor pattern to private credit default waves — quantified in real-time by the infrastructure.
 
 ## Stack technique en synthèse
 
