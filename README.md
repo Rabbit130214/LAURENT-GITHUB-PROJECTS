@@ -31,6 +31,24 @@ Multi-source architecture: FRED live, SEC EDGAR BDC 10-Q planned, ECB Data Porta
 
 **Live reading, 18 July 2026** — CCSS at 51.1/100, alert zone. The CCC-B differential contributes 56% of the total score at +1.92σ (99th percentile over five years) while broad HY OAS sits at -1.07σ. The engine flags this as `SPREAD_TAIL_DIVERGENCE`: the stressed tail is repricing while the broad market stays compressed — the configuration that has historically preceded private credit default waves.
 
+## 🔍 Business notes of thep Private credit risk intelligence engine (at this stage)
+
+The credit market is currently sending two messages that cannot both be true.
+On one side, investors are accepting below-average compensation for bearing credit risk. The premium demanded across the broad high yield market sits below its five-year average. This is the behaviour of a market with nothing on its mind.
+On the other, those same investors are demanding an exceptional premium to lend to the weakest issuers. The gap between distressed borrowers and merely risky ones has reached a level observed on only a handful of days over the past five years.
+In plain terms: the market already knows that some companies will not make it. It has not yet priced that into the whole.
+
+Risks
+Mispricing risk
+Today's spreads are being negotiated in an environment where the broad market demands less than its historical average. Should the dislocation spread, those spreads will have been struck on an assumption about market conditions that no longer holds.
+
+Intra-portfolio dispersion risk
+Managers routinely monitor the average credit quality of their portfolio. That is precisely the metric that stops being informative once the tail starts to deform.
+
+Recognition risk
+When a borrower deteriorates, a manager has several entirely legitimate levers available: extend the maturity, relax a covenant, switch the coupon to PIK. Each may well be the right economic decision for the loan in question.
+But each also defers loss recognition. The loan stays classified as performing, the valuation stays near par, and quarterly reporting shows nothing.
+
 
 ## Stack technique en synthèse
 
