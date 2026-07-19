@@ -18,15 +18,19 @@ Senior quantitative finance professional with 27 years of institutional experien
 
   
 
-## Current work *(private repositories — demos available on request)*
+### 🔍 Private credit risk intelligence engine
 
-- 🔍 * 🔍 **Private credit risk intelligence engine** — multi-source architecture (FRED live, SEC EDGAR BDC 10-Q planned, ECB Data Portal planned) with:
-  * **Cogniwave Credit Stress Score (CCSS)** — composite 0-100 combining HY OAS z-score, CCC-B differential z-score, yield curve slope, 3M momentum. Fully parameterizable via Pydantic (14 tunable parameters), configuration versioning, audit-ready traceability (EU AI Act compliant)
-  * **REST API (FastAPI)** with 3 endpoints (`/current`, `/latest`, `/compute`), auto-generated OpenAPI 3.1 documentation, interactive Swagger UI
-  * **Analytical storage** — DuckDB persisting all snapshots and calculations with the exact configuration used, enabling retroactive analysis and calibration
-  * **Test coverage** — 37 pytest tests (composite + API), CI/CD ready
+Multi-source architecture: FRED live, SEC EDGAR BDC 10-Q planned, ECB Data Portal planned.
 
-  **Live observation, 8 July 2026** — CCSS crossed the alert threshold at 50.18/100. CCC-B component alone contributes 57% of the score (top 3% historical z-score at +1.92σ) while HY OAS remains compressed (-1.18σ). This asymmetric divergence between the broad credit market and the stressed tail is precisely the precursor pattern to private credit default waves — quantified in real-time by the infrastructure.
+* **Cogniwave Credit Stress Score (CCSS)** — 0-100 composite over four components (HY OAS z-score, CCC-B differential z-score, yield curve slope, 3M momentum), derived from five raw FRED series
+* **Fully configurable analytics** — every statistical parameter exposed through Pydantic models across three configuration layers: indicator computation (rolling windows, regime boundaries, alert percentiles), composite weighting and interpretation zones, and signal thresholds. Each computation embeds the exact configuration used, making any historical score reproducible — EU AI Act traceability by construction
+* **Deterministic signal engine** — eight named rules turning a bare score into explainable observations: single-component dominance, tail/broad divergence, zone transitions, regime persistence, momentum regimes. No LLM, no heuristics — same input, same output, every threshold auditable and configurable
+* **REST API** — FastAPI (`/current`, `/latest`, `/compute`), auto-generated OpenAPI 3.1, interactive Swagger UI
+* **Analytical storage** — DuckDB persisting every snapshot with its configuration, enabling retroactive analysis and calibration
+* **Test coverage** — 99 pytest tests across composite, indicators, signals and API layers
+
+**Live reading, 18 July 2026** — CCSS at 51.1/100, alert zone. The CCC-B differential contributes 56% of the total score at +1.92σ (99th percentile over five years) while broad HY OAS sits at -1.07σ. The engine flags this as `SPREAD_TAIL_DIVERGENCE`: the stressed tail is repricing while the broad market stays compressed — the configuration that has historically preceded private credit default waves.
+
 
 ## Stack technique en synthèse
 
