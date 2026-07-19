@@ -5,6 +5,7 @@ Senior quantitative finance professional with 27 years of institutional experien
 
 ## Focus areas
 
+- **Structured products valuation** : Fx Option, Equity option , Structured notes, ..
 - **IRRBB** — interest rate risk in the banking book: gap analysis, EVE/NII
   sensitivity, behavioural modelling, regulatory stress scenarios
 - **Liquidity risk** — NSFR monitoring, behavioural liquidity, funding
